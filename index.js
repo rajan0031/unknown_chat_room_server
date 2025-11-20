@@ -62,7 +62,8 @@ const server = http.createServer(app);
 
 // Allow Angular client (http://localhost:4200)
 app.use(cors({
-  origin: 'http://localhost:4200',
+  // origin: 'http://localhost:4200',
+   origin: 'https://chatrajan.netlify.app',
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -70,7 +71,8 @@ app.use(cors({
 // Attach Socket.IO with CORS
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:4200',
+    // origin: 'http://localhost:4200',
+    origin: 'https://chatrajan.netlify.app',
     methods: ['GET', 'POST'],
     credentials: true
   }
